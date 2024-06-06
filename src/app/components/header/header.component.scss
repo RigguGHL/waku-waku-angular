@@ -1,0 +1,10 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.app-header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+<mat-card>
+    <mat-card-content>
+
+        <mat-table [dataSource]="productsArr">
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+                <mat-cell *matCellDef="let element" class="ps-0 ps-md-3">
+                    <img mat-card-image src="/assets/img/products/flip-flops.png" alt="morron" class="my-3 rounded"
+                        width="90">
+                    <div class="d-flex flex-column ps-0 ps-md-3 py-3">
+                        <mat-card-title>Llavero camara</mat-card-title>
+                        <mat-card-subtitle> Pompompurin</mat-card-subtitle>
+                    </div>
+
+                </mat-cell>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+                <mat-header-cell *matHeaderCellDef> Cantidad </mat-header-cell>
+                <mat-cell *matCellDef="let element">
+                    <div class="d-flex align-items-center float-end">
+                        <button mat-icon-button aria-label="Remove Item">
+                            <mat-icon class="card-icon">remove</mat-icon>
+                        </button>
+                        <span class="px-2"> <b>0</b></span>
+                        <button mat-icon-button aria-label="Add Item">
+                            <mat-icon class="card-icon">add</mat-icon>
+                        </button>
+                    </div>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+                <mat-header-cell *matHeaderCellDef class="pe-1 pe-md-4"> Total </mat-header-cell>
+                <mat-cell *matCellDef="let element" class="pe-0 pe-md-3">
+                    <h2>$100</h2>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+    </mat-card-content>
+</mat-card>

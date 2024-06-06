@@ -1,0 +1,41 @@
+<mat-sidenav-container autosize>
+    <mat-sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
+        <mat-nav-list>
+            <a mat-list-item routerLink="sell-point">
+                <span class="entry">
+                    <mat-icon>storefront</mat-icon>
+                    <span *ngIf="!isCollapsed" class="pe-4">Punto de venta</span>
+                </span>
+            </a>
+            <a mat-list-item routerLink="product-list">
+                <span class="entry">
+                    <mat-icon fontSet="material-icons-outlined">inventory</mat-icon>
+                    <span *ngIf="!isCollapsed" class="pe-4">Productos</span>
+                </span>
+            </a>
+            <a mat-list-item>
+                <span class="entry">
+                    <mat-icon>query_stats</mat-icon>
+                    <span *ngIf="!isCollapsed" class="pe-4">Estadisticas</span>
+                </span>
+            </a>
+            <a mat-list-item>
+                <span class="entry">
+                    <mat-icon fontSet="material-icons-outlined">settings</mat-icon>
+                    <span *ngIf="!isCollapsed" class="pe-4">Opciones</span>
+                </span>
+            </a>
+            <a mat-list-item routerLink="login">
+                <span class="entry">
+                    <mat-icon fontSet="material-icons-outlined">logout</mat-icon>
+                    <span *ngIf="!isCollapsed" class="pe-4">Cerrar sesion</span>
+                </span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="p-3 container-xl">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

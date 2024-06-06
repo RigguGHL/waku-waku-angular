@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="app-header">
+    <button mat-icon-button aria-label="Menu icon" (click)="clickMenu()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a class="navbar-brand d-inline-flex align-items-center ps-2" href="#">
+        <img src="assets/img/logo.jpg" alt="" width="50" height="50"
+            class="d-inline-block align-text-top rounded-circle me-2">
+        <h1 class="m-0"> Waku Waku Shop</h1>
+    </a>
+    <span class="spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+        [routerLink]="'cart'">
+        <mat-icon>shopping_cart</mat-icon>
+    </button>
+</mat-toolbar>
