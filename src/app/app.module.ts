@@ -66,11 +66,12 @@ import { EditProductComponent } from './components/edit-product/edit-product.com
     MatSortModule,
     MatTooltipModule,
     MatDialogModule,
-    MatSelectModule,
-    provideFirestore(() => getFirestore()),
-    provideFirebaseApp(() => initializeApp(environment.firebaseConfig))
+    MatSelectModule
   ],
-  providers: [],
+  providers: [
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideFirestore(() => getFirestore()),
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
